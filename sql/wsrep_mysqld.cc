@@ -555,7 +555,7 @@ static std::string wsrep_server_incoming_address()
         {
           memcpy (inc_addr, node_addr.c_str(), ip_len_mdb);
           snprintf(inc_addr + ip_len_mdb, inc_addr_max - ip_len_mdb, ":%u",
-                   (int)mysqld_port);
+                   mysqld_port);
         }
         else
         {
