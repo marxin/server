@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 connection node_2;
 connection node_1;
-||||||| merged common ancestors
-=======
 call mtr.add_suppression("WSREP has not yet prepared node for application use");
->>>>>>> 10.3
 connection node_1;
 connection node_2;
 connection node_2;

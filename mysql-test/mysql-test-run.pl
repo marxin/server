@@ -3092,15 +3092,6 @@ sub mysql_server_wait {
     return 1;
   }
 
-  if (!sleep_until_file_created($mysqld->value('pid-file'),
-                                      $opt_start_timeout,
-                                      $mysqld->{'proc'},
-                                      $warn_seconds))
-  {
-    $tinfo->{comment}= "Failed to start ".$mysqld->name() . "\n";
-    return 1;
-  }
-
   if (wsrep_on($mysqld))
   {
     mtr_verbose("Waiting for wsrep server " . $mysqld->name() . " to be ready");
